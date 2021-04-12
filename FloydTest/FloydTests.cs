@@ -33,5 +33,22 @@ namespace FloydTest
             
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void FindShortestPathTest_IsolatedVertex_IsolatedVertexInMatrix()
+        {
+            AdjacencyMatrix matrix = FileHandler.CreateAdjacencyMatrix(@"..\..\..\IsolatedVertex.txt");
+
+            double[,] expected =
+            {
+                {0,1,Double.PositiveInfinity}
+                , {2,0,Double.PositiveInfinity}
+                , {Double.PositiveInfinity, Double.PositiveInfinity, 0}
+            };
+
+            var actual = AlgorithmFloyd.FindShortestPathMatrix(matrix).Item1;
+            
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
