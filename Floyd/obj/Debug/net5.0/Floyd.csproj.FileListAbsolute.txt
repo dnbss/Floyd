@@ -1,4 +1,3 @@
-C:\Users\DONBASS\RiderProjects\Floyd\Floyd\bin\Debug\net5.0\Map.exe
 C:\Users\DONBASS\RiderProjects\Floyd\Floyd\bin\Debug\net5.0\Floyd.deps.json
 C:\Users\DONBASS\RiderProjects\Floyd\Floyd\bin\Debug\net5.0\Floyd.dll
 C:\Users\DONBASS\RiderProjects\Floyd\Floyd\bin\Debug\net5.0\ref\Floyd.dll

@@ -6,7 +6,7 @@ namespace Floyd
     {
         static void Main(string[] args)
         {
-            AdjacencyMatrix matrix = FileHandler.CreateAdjacencyMatrix(@"..\..\..\SimpleMatrix.txt");
+            AdjacencyMatrix matrix = FileHandler.CreateAdjacencyMatrix(@"..\..\..\Cities.txt");
             
             Console.WriteLine("Матрица смежности:");
             
