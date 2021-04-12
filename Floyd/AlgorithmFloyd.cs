@@ -8,28 +8,28 @@ namespace Floyd
 
         private static string[,] F;
 
-        private static AdjacencyMatrix _matrix;
-        public static (double[,] , string[,]) FindShortestPathMatrix(AdjacencyMatrix matrix)
+        private static AdjacencyList _list;
+        public static (double[,] , string[,]) FindShortestPathMatrix(AdjacencyList list)
         {
-            _matrix = matrix;
+            _list = list;
             
-            D = _matrix.GetAdjacencyMatrix();
+            D = _list.GetAdjacencyMatrix();
 
-            F = new string[_matrix.Length, _matrix.Length];
+            F = new string[_list.Length, _list.Length];
             
-            for (int i = 0; i < _matrix.Length; i++)
+            for (int i = 0; i < _list.Length; i++)
             {
-                for (int j = 0; j < _matrix.Length; j++)
+                for (int j = 0; j < _list.Length; j++)
                 {
-                    F[i, j] = _matrix[j];
+                    F[i, j] = _list[j];
                 }
             }
             
-            for (int k = 0; k < _matrix.Length; ++k)
+            for (int k = 0; k < _list.Length; ++k)
             {
-                for (int i = 0; i < _matrix.Length; ++i)
+                for (int i = 0; i < _list.Length; ++i)
                 {
-                    for (int j = 0; j < _matrix.Length; ++j)
+                    for (int j = 0; j < _list.Length; ++j)
                     {
                         if (D[i, k] + D[k, j] < D[i, j])
                         {
@@ -46,13 +46,13 @@ namespace Floyd
 
         public static void PrintShortestPathMatrix()
         {
-            for (int i = 0; i < _matrix.Length; ++i)
+            for (int i = 0; i < _list.Length; ++i)
             {
-                for (int j = 0; j < _matrix.Length; ++j)
+                for (int j = 0; j < _list.Length; ++j)
                 {
                     if (i != j)
                     {
-                        Console.Write($"[{_matrix[i]}-> {F[i,j]} : {D[i,j]}]  ");
+                        Console.Write($"[{_list[i]}-> {F[i,j]} : {D[i,j]}]  ");
                     }
                     else
                     {

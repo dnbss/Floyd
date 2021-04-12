@@ -9,11 +9,11 @@ namespace FloydTest
         [Test]
         public void FindShortestPathTest_SimpleMatrix_SuccessfulFounded()
         {
-            AdjacencyMatrix matrix = FileHandler.CreateAdjacencyMatrix(@"..\..\..\SimpleMatrix.txt");
+            AdjacencyList list = FileHandler.CreateAdjacencyList(@"..\..\..\SimpleMatrix.txt");
 
             double[,] expected = {{0, 1, 3}, {2, 0, 5}, {4, 5, 0}};
 
-            var actual = AlgorithmFloyd.FindShortestPathMatrix(matrix).Item1;
+            var actual = AlgorithmFloyd.FindShortestPathMatrix(list).Item1;
             
             Assert.AreEqual(expected, actual);
         }
@@ -21,7 +21,7 @@ namespace FloydTest
         [Test]
         public void FindShortestPathTest_MatrixNA_MatrixNA()
         {
-            AdjacencyMatrix matrix = FileHandler.CreateAdjacencyMatrix(@"..\..\..\MatrixNA.txt");
+            AdjacencyList list = FileHandler.CreateAdjacencyList(@"..\..\..\MatrixNA.txt");
 
             double[,] expected = {
                 {0, Double.PositiveInfinity, Double.PositiveInfinity}
@@ -29,7 +29,7 @@ namespace FloydTest
                 , {Double.PositiveInfinity, Double.PositiveInfinity, 0}
             };
 
-            var actual = AlgorithmFloyd.FindShortestPathMatrix(matrix).Item1;
+            var actual = AlgorithmFloyd.FindShortestPathMatrix(list).Item1;
             
             Assert.AreEqual(expected, actual);
         }
@@ -37,7 +37,7 @@ namespace FloydTest
         [Test]
         public void FindShortestPathTest_IsolatedVertex_IsolatedVertexInMatrix()
         {
-            AdjacencyMatrix matrix = FileHandler.CreateAdjacencyMatrix(@"..\..\..\IsolatedVertex.txt");
+            AdjacencyList list = FileHandler.CreateAdjacencyList(@"..\..\..\IsolatedVertex.txt");
 
             double[,] expected =
             {
@@ -46,7 +46,7 @@ namespace FloydTest
                 , {Double.PositiveInfinity, Double.PositiveInfinity, 0}
             };
 
-            var actual = AlgorithmFloyd.FindShortestPathMatrix(matrix).Item1;
+            var actual = AlgorithmFloyd.FindShortestPathMatrix(list).Item1;
             
             Assert.AreEqual(expected, actual);
         }

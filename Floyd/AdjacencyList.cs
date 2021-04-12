@@ -4,11 +4,11 @@ using Map;
 
 namespace Floyd
 {
-    public class AdjacencyMatrix
+    public class AdjacencyList
     {
         private Map<string, Map<string, double>> adjacencyList;
 
-        public AdjacencyMatrix()
+        public AdjacencyList()
         {
             adjacencyList = new Map<string, Map<string, double>>();
         }

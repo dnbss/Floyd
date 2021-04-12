@@ -5,11 +5,11 @@ namespace Floyd
 {
     public static class FileHandler
     {
-        public static AdjacencyMatrix CreateAdjacencyMatrix(string path)
+        public static AdjacencyList CreateAdjacencyList(string path)
         {
             string[] allStrings = File.ReadAllLines(path);
 
-            AdjacencyMatrix adjacencyMatrix = new AdjacencyMatrix();
+            AdjacencyList adjacencyList = new AdjacencyList();
 
             for (int i = 0; i < allStrings.Length; i++)
             {
@@ -45,10 +45,10 @@ namespace Floyd
                     weightToCity = Double.PositiveInfinity;
                 }
                 
-                adjacencyMatrix.Insert(fromCity, toCity, weightFromCity, weightToCity);
+                adjacencyList.Insert(fromCity, toCity, weightFromCity, weightToCity);
             }
 
-            return adjacencyMatrix;
+            return adjacencyList;
         }
     }
 }

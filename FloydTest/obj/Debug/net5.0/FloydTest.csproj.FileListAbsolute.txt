@@ -1,4 +1,3 @@
-C:\Users\DONBASS\RiderProjects\Floyd\FloydTest\bin\Debug\net5.0\Map.exe
 C:\Users\DONBASS\RiderProjects\Floyd\FloydTest\bin\Debug\net5.0\Floyd.exe
 C:\Users\DONBASS\RiderProjects\Floyd\FloydTest\bin\Debug\net5.0\NUnit3.TestAdapter.dll
 C:\Users\DONBASS\RiderProjects\Floyd\FloydTest\bin\Debug\net5.0\NUnit3.TestAdapter.pdb
